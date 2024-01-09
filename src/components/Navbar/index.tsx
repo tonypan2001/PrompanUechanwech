@@ -29,19 +29,19 @@ const Navbar = () => {
                 </h1>
             </Link>
             <div className="link">
-                <NavLink exact activeclassname="active" to="/">
+                <NavLink to="/">
                     <FontAwesomeIcon icon={faHome}/>
                 </NavLink>
-                <NavLink exact activeclassname="active" to="/about" className="about-link">
+                <NavLink to="/about" className="about-link">
                     <FontAwesomeIcon icon={faUser}/>
                 </NavLink>
-                <NavLink exact activeclassname="active" to="/contact" className="contact-link">
+                <NavLink to="/contact" className="contact-link">
                     <FontAwesomeIcon icon={faContactBook}/>
                 </NavLink>
-                <NavLink exact activeclassname="active" to="/resume" className="resume-link">
+                <NavLink to="/resume" className="resume-link">
                     <FontAwesomeIcon icon={faFile}/>
                 </NavLink>
-                <NavLink exact activeclassname="active" to="/projects" className="projects-link">
+                <NavLink to="/projects" className="projects-link">
                     <FontAwesomeIcon icon={faFolderOpen}/>
                 </NavLink>
             </div>
