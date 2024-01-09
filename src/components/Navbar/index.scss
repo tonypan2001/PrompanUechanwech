@@ -1,0 +1,135 @@
+$base-color: #f6498d;
+$dark-color: #ae3063;
+$yellow-color: #ffd756;
+$text-dark-color: #fff;
+$text-light-color: #555;
+
+.navbar-container {
+    width: 100%;
+    height: 70px;
+    background: transparent;
+
+    position: fixed;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &.scrolled {
+        transition: all 0.3s ease-in-out;
+        background-color: #fff; /* Set background to transparent when scrolled */
+
+        a h1 {
+            color: $text-light-color;
+        }
+
+        .link a {
+            color: $text-light-color;
+        }
+    }
+
+    a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+
+        img {
+            width: 20px;
+            margin-right: .5rem;
+        }
+        
+        h1 {
+            color: $text-dark-color;
+            span {
+                font-style: italic;
+                font-size: x-small;
+            }
+        }
+        h1:hover {
+            color: $base-color;
+            transition: 0.3s ease-out;
+        }
+    }
+
+    .link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            color: $text-dark-color;
+
+            display: block;
+            padding: 1rem;
+            display: flex;
+
+            font-size: large;
+            text-decoration: none;
+
+            i {
+                transition: all 0.3s ease-out;
+            }
+
+            &:hover {
+                color: $base-color;
+
+                svg {
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                content: '';
+                margin-left: 5px;
+                font-size: small;
+                letter-spacing: 3px;
+                width: 100%;
+                text-align: center;
+                opacity: 1;
+                transition: all 0.3s ease-out;
+            }
+
+            &:first-child {
+                &::after {
+                    content: ' HOME';
+                }
+            }
+        }
+
+        a.about-link {
+            &:after {
+                content: ' ABOUT';
+            }
+        }
+
+        a.contact-link {
+            &:after {
+                content: ' CONTACT';
+            }
+        }
+
+        a.resume-link {
+            &:after {
+                content: ' RESUME';
+            }
+        }
+
+        a.projects-link {
+            &:after {
+                content: ' PROJECTS';
+            }
+        }
+
+        a.active {
+            svg {
+                color: $base-color;
+            }
+        }
+    }
+}
