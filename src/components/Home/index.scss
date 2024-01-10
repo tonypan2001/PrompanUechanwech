@@ -182,3 +182,55 @@ $content-color: #ffe2fa;
         }
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+
+        .content {
+            margin-bottom: 4rem;
+    
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        .graphics {
+
+            .circle {
+                width: 150px * 2;
+                height: 150px * 2;
+
+                img {
+                    width: 300px;
+                }
+            }
+
+        }
+
+        .rolling {
+            bottom: 5%;
+        }
+    }
+    .second-container {
+        padding: 3rem 0;
+        height: 100%;
+        .content {
+            .skill-container {
+                display: flex;
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                font-size: large;
+                padding: 0 2rem;
+            }
+        }
+    }
+}

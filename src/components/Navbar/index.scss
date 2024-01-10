@@ -1,5 +1,6 @@
 $base-color: #f6498d;
 $dark-color: #ae3063;
+$bg-color: #4b1d43;
 $yellow-color: #ffd756;
 $text-dark-color: #fff;
 $text-light-color: #555;
@@ -11,10 +12,24 @@ $text-light-color: #555;
 
     position: fixed;
     z-index: 100;
+    padding: 0rem 4rem;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+
+    .burger-menu {
+        display: none;
+        .burger, .open-burger {
+            font-size: 35px;
+            cursor: pointer;
+
+            &:hover {
+                color: $base-color;
+                transition: .2s ease-out;
+            }
+        }
+    }
 
     &.scrolled {
         transition: all 0.3s ease-in-out;
@@ -26,6 +41,17 @@ $text-light-color: #555;
 
         .link a {
             color: $text-light-color;
+        }
+
+        .burger-menu {
+            .burger, .open-burger {
+                color: $text-light-color;
+
+                &:hover {
+                    color: $base-color;
+                    transition: .2s ease-out;
+                }
+            }
         }
     }
 
@@ -130,6 +156,46 @@ $text-light-color: #555;
             svg {
                 color: $base-color;
             }
+        }
+    }
+
+}
+
+.open {
+    display: block;
+}
+.close {
+    display: none;
+}
+
+.slidein {
+    right: 0;
+    transition: 0.4s ease-in-out;
+}
+.slideout {
+    right: -100%;
+    transition: 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar-container {
+        .link {
+            position: absolute;
+            top: 100%;
+            flex-direction: column;
+            align-items: start;
+            background: $bg-color;
+            border: 1px solid #fff;
+            border-radius: 0 0 0 5px;
+
+        }
+        &.scrolled {
+            .link {
+                background: #fff;
+            }
+        }
+        .burger-menu {
+            display: block;
         }
     }
 }

@@ -1,4 +1,4 @@
-import { faContactBook, faFile, faFolderOpen, faHome, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faContactBook, faFile, faFolderOpen, faHome, faUser, faX } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './index.scss'
 import { Link, NavLink } from "react-router-dom"
@@ -6,10 +6,11 @@ import { useEffect, useState } from "react"
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
+    const [toggle, setToggle] = useState(true)
 
     useEffect(() => {
-        const handleScroll= () => {
-            const isScrolled= window.scrollY > 0
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 0
             setScrolled(isScrolled)
         }
 
@@ -28,7 +29,15 @@ const Navbar = () => {
                     Rompan. <br /> | <span>The Frontend Master</span>
                 </h1>
             </Link>
-            <div className="link">
+            <div className="burger-menu" onClick={() => setToggle(!toggle)}>
+                <div className={`burger ${toggle ? 'open' : 'close'}`}>
+                    <FontAwesomeIcon icon={faBars}/>
+                </div>
+                <div className={`open-burger ${toggle ? 'close' : 'open'}`}>
+                    <FontAwesomeIcon icon={faX}/>
+                </div>
+            </div>
+            <div className={`link ${toggle ? 'slideout' : 'slidein'}`}>
                 <NavLink to="/">
                     <FontAwesomeIcon icon={faHome}/>
                 </NavLink>

@@ -6,10 +6,10 @@ import { NavLink } from 'react-router-dom'
 const Footer = () => {
     return (
         <footer>
-            <div>
+            <div className='madeby'>
                 <h1>Designed and Develope by Prompan Uechanwech In 2024</h1>
             </div>
-            <div>
+            <div className='socials-container'>
                 <h1>Find Me On Socials</h1>
                 <div className='icons'>
                     <NavLink target='_blank' to="">
