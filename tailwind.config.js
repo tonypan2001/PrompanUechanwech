@@ -12,7 +12,9 @@ export default {
       'ctm-dark-purple': '#33132e',
       'ctm-darkest-purple': '#240e20',
       'ctm-pink-base': '#f6498d',
-      'ctm-yellow-base': '#ffd756'
+      'ctm-yellow-base': '#ffd756',
+      'ctm-black': '#000',
+      'ctm-white': '#fff'
     }
   },
   plugins: [],
