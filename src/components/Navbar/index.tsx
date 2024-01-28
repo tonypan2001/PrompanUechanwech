@@ -41,13 +41,13 @@ const Navbar = () => {
                 <NavLink to="/">
                     <FontAwesomeIcon icon={faHome}/>
                 </NavLink>
-                <NavLink to="/about" className="about-link">
+                {/* <NavLink to="/about" className="about-link">
                     <FontAwesomeIcon icon={faUser}/>
-                </NavLink>
+                </NavLink> */}
                 <NavLink to="/contact" className="contact-link">
                     <FontAwesomeIcon icon={faContactBook}/>
                 </NavLink>
-                <NavLink to="/resume" className="resume-link">
+                <NavLink to="https://shorturl.at/esNQ5" target="_blank" className="resume-link">
                     <FontAwesomeIcon icon={faFile}/>
                 </NavLink>
                 <NavLink to="/projects" className="projects-link">
