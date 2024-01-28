@@ -6,7 +6,7 @@ function Home() {
         <section>
             {/* FIRST BLOCK */}
             <div className="h-[100vh] bg-ctm-light-purple flex flex-col lg:flex-row justify-center lg:justify-around items-center px-4">
-                <Fade top distance="30%" duration={1500}>
+                <Fade>
                     <div className="p-4 flex flex-col items-center">
                         <div className="flex flex-col items-start">
                             <h1 className="text-[50px] xl:text-[60px]">
@@ -35,7 +35,7 @@ function Home() {
                         </div>
                     </div>
                 </Fade>
-                <Fade duration={1500}>
+                <Fade>
                 <div className="mt-8">
                     <div className="w-[350px] h-[350px] xl:w-[450px] xl:h-[450px] bg-ctm-lightest-purple rounded-full">
                         <img className="w-[300px] xl:w-[400px]" src="/person.svg" alt="" />
@@ -46,7 +46,7 @@ function Home() {
 
             {/* SECOND BLOCK */}
             <div className="h-[100vh] bg-ctm-dark-purple flex flex-col justify-center items-center" id='overview'>
-                <Fade top distance="30%" duration={1500}>
+                <Fade>
                     <div className="flex flex-col justify-center items-center p-6">
                         <h2 className="text-2xl mb-2">INTRODUCTION</h2>
                         <h1 className="text-6xl mb-2">
@@ -57,7 +57,7 @@ function Home() {
                         </p>
                     </div>
                 </Fade>
-                <Fade top distance="30%" duration={1500}>
+                <Fade>
                     <div className="text-[20px] font-medium mt-8">
                         "The more you get, The more you grow"
                     </div>
@@ -66,7 +66,7 @@ function Home() {
 
             {/* THIRD BLOCK */}
             <div className="min-h-[100vh] bg-ctm-darkest-purple flex flex-col justify-between lg:justify-center pt-12 pb-12">
-                <Fade top distance="20%" duration={1500}>
+                <Fade>
                     <div className="flex flex-col justify-center items-center gap-8 mb-12">
                         <h1 className="text-5xl">Programming <span className="text-ctm-pink-base">Languages</span></h1>
                         <div className="grid grid-cols-2 lg:grid-cols-6 text-[80px] text-center gap-6">
@@ -80,7 +80,7 @@ function Home() {
                         </div>
                     </div>
                 </Fade>
-                <Fade top distance="20%" duration={1500}>
+                <Fade>
                     <div className="flex flex-col justify-center items-center gap-8">
                         <h1 className="text-5xl"><span className="text-ctm-pink-base">Frameworks</span> and <span className="text-ctm-pink-base">Libraries</span></h1>
 
