@@ -1,5 +1,5 @@
-import { Slide, Fade } from 'react-awesome-reveal'
-import React, { useRef } from 'react'
+import { Slide } from 'react-awesome-reveal'
+import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
 const SERVICE_ID = "service_0irou2a"
@@ -7,20 +7,23 @@ const TEMPLATE_ID = "template_ghgdaas"
 const PUBLIC_KEY = "RYcasxNP6ytKvM22E"
 
 function Contact() {
-    const form = useRef();
+    const form = useRef<HTMLFormElement>(null);
 
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-        .then((result) => {
-            console.log(result.text);
-            console.log("Message sent")
-            alert("Message sent")
-        }, (error) => {
-            console.log(error.text);
-        });
+        if (form.current) {
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+                console.log("Message sent")
+                alert("Message sent")
+            }, (error) => {
+                console.log(error.text);
+            });
+        }
+
     };
 
     return (
@@ -35,7 +38,6 @@ function Contact() {
                     </div>
                 </Slide>
                 <form ref={form} onSubmit={sendEmail} className="w-full max-w-[400px] px-4">
-                    {/* <Slide direction="up" duration={1300} triggerOnce> */}
                         <div className="flex flex-col justify-center mb-3">
                             <label htmlFor="name" className="text-[20px] font-semibold mb-1">Name</label>
                             <input 
@@ -58,7 +60,7 @@ function Contact() {
                         </div>
                         <div className="flex flex-col justify-center mb-3">
                             <label htmlFor="message" className="text-[20px] font-semibold mb-1">Message</label>
-                            <textarea required name="message" id="message" rows="5" placeholder="Your message" className="text-[18px] text-ctm-black focus:outline-none focus:ring-2 focus:ring-ctm-pink-base p-4"/>
+                            <textarea required name="message" id="message" rows={5} placeholder="Your message" className="text-[18px] text-ctm-black focus:outline-none focus:ring-2 focus:ring-ctm-pink-base p-4"/>
                         </div>
 
                         <div className="w-full mt-8">
@@ -66,7 +68,6 @@ function Contact() {
                                 Send Message
                             </button>
                         </div>
-                    {/* </Slide> */}
                 </form>
             </div>
         </section>
