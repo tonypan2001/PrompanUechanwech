@@ -1,5 +1,6 @@
 import { Slide } from 'react-awesome-reveal'
 import { useRef } from 'react'
+import React from 'react'
 import emailjs from '@emailjs/browser'
 
 const SERVICE_ID = "service_0irou2a"
@@ -10,7 +11,7 @@ function Contact() {
     const form = useRef<HTMLFormElement>(null);
 
 
-    const sendEmail = (e) => {
+    const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
 
         if (form.current) {
