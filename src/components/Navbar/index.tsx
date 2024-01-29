@@ -38,19 +38,20 @@ const Navbar = () => {
                 </div>
             </div>
             <div className={`link ${toggle ? 'slideout' : 'slidein'}`}>
-                <NavLink to="/">
+                <NavLink to="/" onClick={() => setToggle(!toggle)}>
                     <FontAwesomeIcon icon={faHome}/>
                 </NavLink>
                 {/* <NavLink to="/about" className="about-link">
                     <FontAwesomeIcon icon={faUser}/>
                 </NavLink> */}
-                <NavLink to="/contact" className="contact-link">
+                <NavLink to="/contact" className="contact-link" onClick={() => setToggle(!toggle)}>
                     <FontAwesomeIcon icon={faContactBook}/>
                 </NavLink>
-                <NavLink to="https://shorturl.at/esNQ5" target="_blank" className="resume-link">
+                {/* https://shorturl.at/esNQ5 */}
+                <NavLink to="/resume" className="resume-link" onClick={() => setToggle(!toggle)}>
                     <FontAwesomeIcon icon={faFile}/>
                 </NavLink>
-                <NavLink to="/projects" className="projects-link">
+                <NavLink to="/projects" className="projects-link" onClick={() => setToggle(!toggle)}>
                     <FontAwesomeIcon icon={faFolderOpen}/>
                 </NavLink>
             </div>
