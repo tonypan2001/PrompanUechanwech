@@ -29,7 +29,7 @@ function Contact() {
 
     return (
         <section>
-            <div className="min-h-[100vh] bg-ctm-light-purple flex flex-col justify-center items-center">
+            <div className="h-full min-h-[100vh] bg-ctm-light-purple flex flex-col justify-center items-center py-16">
                 <Slide cascade direction="down" duration={1300} triggerOnce>
                     <div className="text-center mt-12 mb-12 px-4">
                         <h1 className="text-[30px] md:text-[40px] font-bold">Write me a Message</h1>
