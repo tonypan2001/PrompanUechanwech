@@ -4,7 +4,10 @@ import Layout from "./components/Layout"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Resume from "./components/Resume"
+// import dotenv from 'dotenv'
 import './index.css'
+
+// dotenv.config()
 
 const App = () => {
 
