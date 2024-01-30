@@ -31,7 +31,8 @@ function Contact() {
                     user_name: user_name.current?.value, 
                     user_email: user_email.current?.value,
                     message: message.current?.value
-                }
+                },
+                PUBLIC_KEY
             )
             alert("Message sent successfully")
         } catch (error) {
