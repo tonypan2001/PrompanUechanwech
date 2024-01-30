@@ -74,7 +74,7 @@ function Contact() {
                 </Slide>
                 <div className="">
                     <Slide cascade direction="down" duration={1300} triggerOnce>
-                        <div className="text-center mb-12 px-4">
+                        <div className="text-center lg:mt-12 mb-12 px-4">
                             <h1 className="text-[30px] md:text-[40px] font-bold"><span className="text-ctm-pink-base">Write</span> me a Message</h1>
                             <p className="text-[16px] md:text-[20px] text-wrap">
                                 Got a question? I'd love to hear from you. Send me a message and I'll respond ASAP.
@@ -111,7 +111,7 @@ function Contact() {
                                 className="text-[18px] text-ctm-black focus:outline-none focus:ring-2 focus:ring-ctm-pink-base p-4"
                                 name="message" 
                                 id="message" 
-                                rows={5} 
+                                rows={3} 
                                 placeholder="Your message"
                                 ref={message}
                                 required 
