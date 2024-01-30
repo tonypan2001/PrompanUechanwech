@@ -5,9 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
+// const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+// const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+// const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
+
+const SERVICE_ID = "service_tgw741r"
+const TEMPLATE_ID = "template_dpsrvuk"
+const PUBLIC_KEY = "WN5RdTrE89qHL8TIw"
 
 function Contact() {
     // const form = useRef<HTMLFormElement>(null);
@@ -25,8 +29,8 @@ function Contact() {
         try {
             setLoading(true)
             await emailjs.send(
-                SERVICE_ID, 
-                TEMPLATE_ID, 
+                SERVICE_ID,
+                TEMPLATE_ID,
                 {
                     user_name: user_name.current?.value, 
                     user_email: user_email.current?.value,
@@ -123,7 +127,7 @@ function Contact() {
                                     Send Message
                                 </span>
                                 <span className={`${loading ? 'block' : 'hidden'} flex flex-row justify-center`}>
-                                    <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24"></svg>
+                                    <svg className="animate-spin rounded-full border-4 border-ctm-white border-t-ctm-yellow-base h-10 w-10 mr-3" viewBox="0 0 24 24"></svg>
                                     Sending...
                                 </span>
                             </button>
