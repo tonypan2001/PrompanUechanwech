@@ -13,10 +13,10 @@ function Home() {
     return (
         <section>
             {/* FIRST BLOCK */}
-            <div className="relative min-h-[100vh] bg-ctm-light-purple flex flex-col lg:flex-row justify-center sm:justify-around items-center px-4 py-16">
+            <div className="relative min-h-[100vh] bg-ctm-light-purple flex flex-col lg:flex-row justify-center sm:justify-around items-center py-16">
                 <Snowfall snowflakeCount={50} />
                 <Slide direction="left" triggerOnce>
-                    <div className="p-4 flex flex-col items-center xl:items-end">
+                    <div className="p-4 flex flex-col items-center">
                         <div className="flex flex-col items-start">
                             <h1 className="text-[30px] sm:text-[50px] xl:text-[60px]">
                                 Hi There! ✋🏼
@@ -27,7 +27,7 @@ function Home() {
                             <h3 className="text-3xl xl:text-5xl text-ctm-yellow-base font-normal">
                                 <Typewriter
                                     options={{
-                                        strings: ['Frontend Developer','JS Master','Graphics Designer'],
+                                        strings: ['Frontend Developer','JS Master','Graphics Design'],
                                         autoStart: true,
                                         loop: true,
                                     }}
@@ -56,7 +56,7 @@ function Home() {
                 <Slide direction="right" triggerOnce>
                 <div className="mt-8">
                 {/* bg-ctm-lightest-purple */}
-                    <div className="w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] xl:w-[450px] xl:h-[450px] bg-ctm-lightest-purple rounded-full">
+                    <div className="w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] xl:w-[450px] xl:h-[450px] rounded-full">
                         <img className="w-[250px] sm:w-[300px] xl:w-[400px] pointer-events-none" src={person} alt="" />
                     </div>
                 </div>
@@ -71,24 +71,26 @@ function Home() {
             {/* SECOND BLOCK */}
             <div className="relative min-h-[100vh] bg-ctm-dark-purple flex flex-col justify-center items-center p-6" id='overview'>
                 <Snowfall snowflakeCount={50} />
-                <Fade triggerOnce>
-                    <div className="flex flex-col justify-center items-center p-6">
-                        <h2 className="text-2xl mb-2">INTRODUCTION</h2>
-                        <h1 className="text-6xl mb-2">
-                            Overview.
-                        </h1>
-                        <p className="text-[20px] sm:text-[25px] font-thin max-w-[800px]">
-                            Hi, I'm <span className="text-ctm-pink-base font-normal">Prompan Uechanwech</span> from <span className="text-ctm-pink-base font-normal">Kasetsart University.</span> I'm a student studying computer science. Additionally, I have a strong interest in graphic design, games, and web development. I'm a skilled software developer with experience in HTML, CSS, JavaScript and TypeScript, and I have been practicing in frameworks like Vue.js, Nuxt.js, Laravel and React.
-                        </p>
-                    </div>
-                </Fade>
-                <Fade triggerOnce>
-                    <div className="text-[20px] text-center font-medium mt-8">
-                        "The more you get, The more you grow"
-                    </div>
-                </Fade>
+                <div className="relative z-10">
+                    <Fade triggerOnce>
+                        <div className="flex flex-col justify-center items-center p-6">
+                            <h2 className="text-2xl mb-2">INTRODUCTION</h2>
+                            <h1 className="text-6xl mb-2">
+                                Overview.
+                            </h1>
+                            <p className="text-[20px] sm:text-[25px] font-thin max-w-[800px]">
+                                Hi, I'm <span className="text-ctm-pink-base font-normal">Prompan Uechanwech</span> from <span className="text-ctm-pink-base font-normal">Kasetsart University.</span> I'm a student studying computer science. Additionally, I have a strong interest in graphic design, games, and web development. I'm a skilled software developer with experience in HTML, CSS, JavaScript and TypeScript, and I have been practicing in frameworks like Vue.js, Nuxt.js, Laravel and React.
+                            </p>
+                        </div>
+                    </Fade>
+                    <Fade triggerOnce>
+                        <div className="text-[20px] text-center font-medium mt-8">
+                            "The more you get, The more you grow"
+                        </div>
+                    </Fade>
+                </div>
                 <img 
-                className="absolute bottom-0 pointer-events-none"
+                className="absolute bottom-0 z-0 pointer-events-none"
                 src={wave2} 
                 alt="" 
                 />
