@@ -13,6 +13,7 @@ export default {
       'ctm-darkest-purple': '#240e20',
       'ctm-pink-base': '#f6498d',
       'ctm-yellow-base': '#ffd756',
+      'ctm-dark-yellow-base': '#ffc400',
       'ctm-black': '#000',
       'ctm-white': '#fff'
     }

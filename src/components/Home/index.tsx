@@ -2,14 +2,21 @@ import { Link } from 'react-router-dom'
 import Fade, { Slide } from 'react-awesome-reveal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import Snowfall from 'react-snowfall'
+import Typewriter from 'typewriter-effect'
+
+import person from '../../assets/images/person.svg'
+import wave1 from '../../assets/svg/wave1.svg'
+import wave2 from '../../assets/svg/wave2.svg'
 
 function Home() {
     return (
         <section>
             {/* FIRST BLOCK */}
-            <div className="min-h-[100vh] bg-ctm-light-purple flex flex-col lg:flex-row justify-center sm:justify-around items-center px-4 py-16">
+            <div className="relative min-h-[100vh] bg-ctm-light-purple flex flex-col lg:flex-row justify-center sm:justify-around items-center px-4 py-16">
+                <Snowfall snowflakeCount={50} />
                 <Slide direction="left" triggerOnce>
-                    <div className="p-4 flex flex-col items-center">
+                    <div className="p-4 flex flex-col items-center xl:items-end">
                         <div className="flex flex-col items-start">
                             <h1 className="text-[30px] sm:text-[50px] xl:text-[60px]">
                                 Hi There! ✋🏼
@@ -17,8 +24,16 @@ function Home() {
                             <h2 className="text-[20px] sm:text-[40px] xl:text-[50px] mb-4">
                                 I'm <span className="text-ctm-pink-base">Prompan Uechanwech</span>
                             </h2>
-                            <h3 className="text-2xl xl:text-3xl">
-                                <span className="hover:text-ctm-yellow-base">
+                            <h3 className="text-3xl xl:text-5xl text-ctm-yellow-base font-normal">
+                                <Typewriter
+                                    options={{
+                                        strings: ['Frontend Developer','JS Master','Graphics Designer'],
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                />
+
+                                {/* <span className="hover:text-ctm-yellow-base">
                                     Frontend Developer
                                 </span>&nbsp;/&nbsp;
                                 <span className="hover:text-ctm-yellow-base">
@@ -26,12 +41,12 @@ function Home() {
                                 </span>&nbsp;/&nbsp;
                                 <span className="hover:text-ctm-yellow-base">
                                     Graphics Designer
-                                </span>
+                                </span> */}
                             </h3>
                         </div>
 
                         <div className="mt-8 p-4">
-                            <Link to="/contact" className="border-2 border-ctm-yellow-base text-4xl text-ctm-yellow-base font-bold p-2.5 hover:text-ctm-pink-base hover:bg-ctm-yellow-base hover:border-ctm-pink-base ease-in duration-150">
+                            <Link to="/contact" className="border-2 border-ctm-yellow-base text-4xl text-ctm-yellow-base font-bold p-2.5 hover:text-ctm-pink-base hover:bg-ctm-yellow-base rounded-md ease-in duration-300">
                                 <FontAwesomeIcon icon={faWhatsapp} className="mr-2"/>
                                 CONTACT ME
                             </Link>
@@ -40,15 +55,22 @@ function Home() {
                 </Slide>
                 <Slide direction="right" triggerOnce>
                 <div className="mt-8">
+                {/* bg-ctm-lightest-purple */}
                     <div className="w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] xl:w-[450px] xl:h-[450px] bg-ctm-lightest-purple rounded-full">
-                        <img className="w-[250px] sm:w-[300px] xl:w-[400px]" src="/person.svg" alt="" />
+                        <img className="w-[250px] sm:w-[300px] xl:w-[400px] pointer-events-none" src={person} alt="" />
                     </div>
                 </div>
                 </Slide>
+                <img 
+                className="absolute bottom-0 pointer-events-none"
+                src={wave1} 
+                alt="" 
+                />
             </div>
 
             {/* SECOND BLOCK */}
-            <div className="min-h-[100vh] bg-ctm-dark-purple flex flex-col justify-center items-center p-6" id='overview'>
+            <div className="relative min-h-[100vh] bg-ctm-dark-purple flex flex-col justify-center items-center p-6" id='overview'>
+                <Snowfall snowflakeCount={50} />
                 <Fade triggerOnce>
                     <div className="flex flex-col justify-center items-center p-6">
                         <h2 className="text-2xl mb-2">INTRODUCTION</h2>
@@ -65,10 +87,16 @@ function Home() {
                         "The more you get, The more you grow"
                     </div>
                 </Fade>
+                <img 
+                className="absolute bottom-0 pointer-events-none"
+                src={wave2} 
+                alt="" 
+                />
             </div>
 
             {/* THIRD BLOCK */}
-            <div className="min-h-[100vh] bg-ctm-darkest-purple flex flex-col justify-between lg:justify-center pt-12 pb-12">
+            <div className="relative min-h-[100vh] bg-ctm-darkest-purple flex flex-col justify-between lg:justify-center pt-12 pb-12">
+                <Snowfall snowflakeCount={50} />
                 <Fade triggerOnce>
                     <div className="flex flex-col justify-center items-center gap-8 mb-12">
                         <h1 className="text-4xl sm:text-5xl px-4">Programming <span className="text-ctm-pink-base">Languages</span></h1>

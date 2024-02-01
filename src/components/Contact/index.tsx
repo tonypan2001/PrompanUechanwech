@@ -5,6 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
+import { Snowfall } from 'react-snowfall'
+
+import wave3 from '../../assets/svg/wave3.svg'
+
 // const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
 // const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
 // const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
@@ -49,9 +53,10 @@ function Contact() {
 
     return (
         <section>
-            <div className="h-full min-h-[100vh] bg-ctm-light-purple flex flex-col lg:flex-row-reverse justify-around items-center py-16">
+            <div className="relative z-100 h-full min-h-[100vh] bg-ctm-light-purple flex flex-col lg:flex-row-reverse justify-around items-center py-16">
+                <Snowfall snowflakeCount={50}/>
                 <Slide direction="down" duration={1300} triggerOnce>
-                    <div className="mt-12 mb-12 p-8 bg-ctm-dark-purple rounded-md">
+                    <div className="relative z-10 w-full mt-12 mb-12 p-8 bg-ctm-dark-purple rounded-md">
                         <h1 className="text-[30px] md:text-[40px] font-bold"><span className="text-ctm-pink-base">Find</span> me on</h1>
                         <ul>
                             <li className="text-[18px]">
@@ -60,11 +65,11 @@ function Contact() {
                             </li>
                             <li className="text-[18px]">
                                 <FontAwesomeIcon icon={faGithub}/>
-                                <a href="https://github.com/tonypan2001" target="_blank" className="ml-2">tonypan2001</a> 
+                                <a href="https://github.com/tonypan2001" target="_blank" className="ml-2 hover:text-ctm-white">tonypan2001</a> 
                             </li>
                             <li className="text-[18px]">
                                 <FontAwesomeIcon icon={faLinkedin}/>
-                                <a href="https://www.linkedin.com/in/prompan-uechanwech-78b44b2b0/" target="_blank" className="ml-2">Prompan Uechanwech</a>
+                                <a href="https://www.linkedin.com/in/prompan-uechanwech-78b44b2b0/" target="_blank" className="ml-2 hover:text-ctm-white">Prompan Uechanwech</a>
                             </li>
                         </ul>
                     </div>
@@ -72,7 +77,7 @@ function Contact() {
                         <h3 className="font-extrabold text-3xl">OR</h3>
                     </div>
                 </Slide>
-                <div className="">
+                <div className="relative z-10">
                     <Slide cascade direction="down" duration={1300} triggerOnce>
                         <div className="text-center lg:mt-12 mb-12 px-4">
                             <h1 className="text-[30px] md:text-[40px] font-bold"><span className="text-ctm-pink-base">Write</span> me a Message</h1>
@@ -134,6 +139,7 @@ function Contact() {
                         </form>
                     </JackInTheBox>
                 </div>
+                <img className="absolute bottom-0 z-0 pointer-events-none" src={wave3} alt="" />
             </div>
         </section>
     )

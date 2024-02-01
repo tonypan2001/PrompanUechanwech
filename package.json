@@ -24,8 +24,10 @@
     "react-awesome-reveal": "^4.2.7",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1",
+    "react-snowfall": "^2.0.0",
     "sort-by": "^0.0.2",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.10",
