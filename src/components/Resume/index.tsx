@@ -2,7 +2,6 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import cv from '../../assets/pdf/cv.jpg'
-import wave3 from '../../assets/svg/wave3.svg'
 
 import { Snowfall } from "react-snowfall"
 
