@@ -5,7 +5,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import Snowfall from 'react-snowfall'
 import Typewriter from 'typewriter-effect'
 
-import person from '../../assets/images/person.svg'
+import person from '../../assets/svg/person.svg'
 import wave1 from '../../assets/svg/wave1.svg'
 import wave2 from '../../assets/svg/wave2.svg'
 
